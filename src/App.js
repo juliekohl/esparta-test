@@ -22,7 +22,7 @@ function App() {
       createTodoTask(e, i);
     }
     if (e.key === 'Backspace' && todos[i].content === '') {
-      e.preventDefaul();
+      e.preventDefault();
       return removeTodoTask(i);
     }
   }
@@ -63,11 +63,11 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className="title">My to do list</h1>
       <form className="todo-list">
-        <h1 className="title">My to do list</h1>
         <ul className="todo-list__ul">
           {todos.map((todo, i) => (
-            <div className={`todo ${todo.isCompleted && 'todo-is-completed'}`}>
+            <div key={i} className={`todo ${todo.isCompleted && 'todo-is-completed'}`}>
               <div className={'checkbox'} onClick={() => toggleTodoTaskComplete(i)}>
                 {todo.isCompleted && (
                   <span>&#x2714;</span>
