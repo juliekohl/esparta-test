@@ -1,14 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
-  background-color: #282c34;
   min-height: 100vh;
+  background-color: #282c34;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
+
 .App {
   padding: 10rem;
   text-align: center;
 }
 
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+.todo {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  font-size: 10px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.checkbox:hover {
+  border: 1px solid rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.checkbox-checked {
+  color: #000;
+  background: #fff;
+}
+
+.todo-list__ul {
+  width: 500px;
+  padding: 0;
+  list-style: none;
+  line-height: 2rem;
+}
+
+input {
+  width: 100%;
+  font-size: 1.4rem;
+  color: white;
+  border: none;
+  outline: none;
+  background: transparent;
+}
