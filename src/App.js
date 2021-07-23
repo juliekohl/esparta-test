@@ -3,9 +3,9 @@ import './App.css';
 
 function App() {
   const [todos, setTodos] = useState([
-    { content: 'Task 1', isCompleted: true },
+    { content: 'Task 1', isCompleted: false },
     { content: 'Task 2', isCompleted: false },
-    { content: 'Task 3', isCompleted: false },
+    { content: 'Task 3', isCompleted: true },
   ]);
 
   const formRef = useRef(null);
@@ -61,20 +61,8 @@ function App() {
   function toggleTaskComplete(index) {
     let temporaryTodos = [...todos];
     temporaryTodos[index].isCompleted = !temporaryTodos[index].isCompleted;
-    temporaryTodos = temporaryTodos.sort(dynamicSort("isCompleted"));
+    temporaryTodos = temporaryTodos.sort((a, b) => (a.isCompleted > b.isCompleted) ? 1 : -1);
     setTodos(temporaryTodos);
-  }
-
-  function dynamicSort(property) {
-    let sortOrder = 1;
-    if (property[0] === "-") {
-        sortOrder = -1;
-        property = property.substr(1);
-    }
-    return function (a, b) {
-        const result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 0 : 1;
-        return result * sortOrder;
-    }
   }
 
   return (
