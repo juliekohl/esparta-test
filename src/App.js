@@ -66,18 +66,24 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1 className="title">My Todo List</h1>
-      <form className="todo-list" ref={formRef}>
-        <ul className="todo-list__ul">
+    <div className="todo">
+      <img
+        className="todo__logo"
+        alt="Logo Esparta"
+        src="https://esparta.io/wp-content/themes/esparta_site/images/logo_esparta_header_fechado.svg"
+      />
+      <h1 className="todo__title">My Todo List</h1>
+      <form className="todo__form" ref={formRef}>
+        <ul className="todo__list">
           {todos.map((todo, i) => (
-            <div key={i} className={`todo ${todo.isCompleted && 'todo-is-completed'}`}>
-              <div className={'checkbox'} onClick={() => toggleTaskComplete(i)}>
+            <div key={i} className={`todo__item ${todo.isCompleted && 'todo__item--is-completed'}`}>
+              <div className="todo__checkbox" onClick={() => toggleTaskComplete(i)}>
                 {todo.isCompleted && (
                   <span>&#x2714;</span>
                 )}
               </div>
               <input
+                className="todo__input"
                 type="text"
                 value={todo.content}
                 onKeyDown={(e) => handleKeyDown(e, i)}
@@ -87,6 +93,7 @@ function App() {
           ))}
         </ul>
       </form>
+      <footer className="todo__footer">Esparta Tecnologia e Inovação</footer>
     </div>
   );
 }

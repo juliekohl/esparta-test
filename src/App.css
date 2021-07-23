@@ -1,39 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+  --color-esparta-red: #d9342b;
+  --color-gray-50: gray;
+  --color-gray-10: #282c34;
+  --color-white: white;
+}
+
 body {
   min-height: 100vh;
-  background-color: #282c34;
+  background-color: var(--color-gray-10);
   font-family: 'Montserrat', sans-serif;
-  color: #fff;
+  color: var(--color-white);
 }
 
-.App {
-  padding: 10rem;
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo {
+  width: 50vw;
+  height: 50vh;
+}
+
+.todo__logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.todo__title {
+  margin: 40px 0 25px;
   text-align: center;
+  font-size: 40px;
+  color: var(--color-esparta-red);
 }
 
-.todo-list {
+.todo__form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.todo {
-  display: flex;
-  align-items: center;
-  margin: 1rem 0;
-}
-.todo-is-completed .checkbox {
-  color: #282c34;
-  background: #fff;
+.todo__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.todo-is-completed input {
+.todo__item {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+.todo__item--is-completed .todo__checkbox {
+  color: var(--color-gray-10);
+  border-color: var(--color-esparta-red);
+  background: var(--color-esparta-red);
+}
+
+.todo__item--is-completed .todo__input {
   text-decoration: line-through;
 }
 
-.checkbox {
+.todo__checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,33 +75,32 @@ body {
   margin-right: 10px;
   font-size: 10px;
   border-radius: 50%;
-  border: 1px solid #fff;
+  border: 1px solid var(--color-white);
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
 
-.checkbox:hover {
-  border: 1px solid rgba(255, 255, 255, 0);
-  background: rgba(255, 255, 255, 0.25);
+.todo__checkbox:hover {
+  border: 1px solid var(--color-gray-50);
+  background: var(--color-gray-50);
 }
 
-.checkbox-checked {
-  color: #282c34;
-  background: #fff;
+.todo__checkbox:hover span {
+  color: var(--color-esparta-red);
 }
 
-.todo-list__ul {
-  width: 500px;
-  padding: 0;
-  list-style: none;
-  line-height: 2rem;
-}
-
-input {
+.todo__input {
   width: 100%;
-  font-size: 1.4rem;
-  color: #fff;
+  font-size: 22px;
+  color: var(--color-white);
   border: none;
   outline: none;
   background: transparent;
+}
+
+.todo__footer{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--color-gray-50);
 }
