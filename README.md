@@ -1,6 +1,43 @@
-# Getting Started with Create React App
+# My Todo List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Check the release accessing the link: XXX
+
+## Overview
+
+Hey Esparta!
+
+This to-do list app was built to be simple, stylish, and user-friendly.
+
+This project, named My Todo List, has one goal: helping to organize your tasks like including updating, marking the task as done, or excluding. Making it easier to see the tasks to be done and those that have already been completed.
+
+I hope you enjoy the experience.
+
+## Details
+
+I started this project using ReactJS.
+
+I always start my projects by creating the HTML framework and CSS before writing any logic in JavaScript.
+
+In this project, I planned to use the hook State because the state allows you to track changes that occur in our component. And a to-do list can change a lot.
+
+For example:
+	• Adding new todos
+	• Changing the wording of existing todos
+	• Deleting todos
+	• Completing todos
+	• Un-completing todos
+
+When using the useState we need to set two important values: Getter and Setter.
+
+I used the map function to traverse the entire array and render each task item that is inside the array.
+
+Then I proceeded to create and remove tasks, detecting if the "enter" or "backspace" key was pressed. If true, call a function for that action.
+When deleting a task, a confirmation box for this action appears. 
+Input field has the onChange event handler which allows you to find the value of that field changes, an event object is given, which allows you to find the value through event.target.value.
+
+In order to mark the task as completed, I used the onClick handler in the todo__checkbox class, created the to-do completed class, and the onClick handler calls the toggle function.
+
+I applied BEM when defining your CSS Design Patterns;
 
 ## Available Scripts
 
@@ -27,8 +64,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
@@ -39,32 +74,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Need something else?
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have questions or suggestions please let me know.
