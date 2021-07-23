@@ -3,9 +3,10 @@ import './App.css';
 
 function App() {
   const [todos, setTodos] = useState([
-    { content: 'Task 1', isCompleted: false },
-    { content: 'Task 2', isCompleted: false },
-    { content: 'Task 3', isCompleted: true },
+    { content: 'Oi pessoal,', isCompleted: false },
+    { content: 'Espero que gostem!', isCompleted: false },
+    { content: 'Estou à disposição para melhorias :)', isCompleted: false },
+    { content: 'Fazer aquele cafézinho!', isCompleted: true },
   ]);
 
   const formRef = useRef(null);
@@ -66,35 +67,37 @@ function App() {
   }
 
   return (
-    <div className="todo">
-      <img
-        className="todo__logo"
-        alt="Logo Esparta"
-        src="https://esparta.io/wp-content/themes/esparta_site/images/logo_esparta_header_fechado.svg"
-      />
-      <h1 className="todo__title">My Todo List</h1>
-      <form className="todo__form" ref={formRef}>
-        <ul className="todo__list">
-          {todos.map((todo, i) => (
-            <div key={i} className={`todo__item ${todo.isCompleted && 'todo__item--is-completed'}`}>
-              <div className="todo__checkbox" onClick={() => toggleTaskComplete(i)}>
-                {todo.isCompleted && (
-                  <span>&#x2714;</span>
-                )}
+    <>
+      <div className="todo">
+        <img
+          className="todo__logo"
+          alt="Logo Esparta"
+          src="https://esparta.io/wp-content/themes/esparta_site/images/logo_esparta_header_fechado.svg"
+        />
+        <h1 className="todo__title">My Todo List</h1>
+        <form className="todo__form" ref={formRef}>
+          <ul className="todo__list">
+            {todos.map((todo, i) => (
+              <div key={i} className={`todo__item ${todo.isCompleted && 'todo__item--is-completed'}`}>
+                <div className="todo__checkbox" onClick={() => toggleTaskComplete(i)}>
+                  {todo.isCompleted && (
+                    <span>&#x2714;</span>
+                  )}
+                </div>
+                <input
+                  className="todo__input"
+                  type="text"
+                  value={todo.content}
+                  onKeyDown={(e) => handleKeyDown(e, i)}
+                  onChange={(e) => handleChangeUpdateTask(e, i)}
+                />
               </div>
-              <input
-                className="todo__input"
-                type="text"
-                value={todo.content}
-                onKeyDown={(e) => handleKeyDown(e, i)}
-                onChange={(e) => handleChangeUpdateTask(e, i)}
-              />
-            </div>
-          ))}
-        </ul>
-      </form>
-      <footer className="todo__footer">Esparta Tecnologia e Inovação</footer>
-    </div>
+            ))}
+          </ul>
+        </form>
+      </div>
+      <footer className="todo__footer">Built for <strong>Esparta Tecnologia e Inovação</strong> by Juliana Cochenski.</footer>
+    </>
   );
 }
 

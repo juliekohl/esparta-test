@@ -4,36 +4,39 @@
   --color-esparta-red: #d9342b;
   --color-gray-50: gray;
   --color-gray-10: #282c34;
+  --color-gray-5: #1f1f1f;
   --color-white: white;
 }
 
 body {
   min-height: 100vh;
-  background-color: var(--color-gray-10);
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-gray-5);
   font-family: 'Montserrat', sans-serif;
   color: var(--color-white);
 }
 
 #root {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
 }
 
 .todo {
   width: 50vw;
-  height: 50vh;
+  max-width: 600px;
+  padding: 70px 35px;
+  background-color: var(--color-gray-10);
 }
 
 .todo__logo {
   display: block;
-  margin: 0 auto;
 }
 
 .todo__title {
   margin: 40px 0 25px;
-  text-align: center;
   font-size: 40px;
   color: var(--color-esparta-red);
 }
@@ -46,6 +49,7 @@ body {
 }
 
 .todo__list {
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -100,7 +104,6 @@ body {
 
 .todo__footer{
   margin-top: 30px;
-  text-align: center;
   font-size: 12px;
   color: var(--color-gray-50);
 }
