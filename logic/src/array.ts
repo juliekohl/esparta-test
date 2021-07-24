@@ -1,9 +1,21 @@
 class ArraySolution {
+    /**
+     * Get all unique values
+     * @param value 
+     * @param index 
+     * @param self 
+     * @returns boolean
+     */
     private getUnique(value, index, self): boolean {
         return self.indexOf(value) === index;
     }
 
-    private getArrayElementsLength(array: number[]) {
+    /**
+     * Get length of same elements in an array
+     * @param array
+     * @returns 
+     */
+    private getArrayEqualElementsLength(array: number[]): {} {
         const counts = {};
         array.forEach(function(x) {
             counts[x] = (counts[x] || 0) + 1;
@@ -11,9 +23,14 @@ class ArraySolution {
         return counts;
     }
 
+    /**
+     * The solution
+     * @param array 
+     * @returns 
+     */
     public solution(array: number[]): null | number | number[] {
         const uniques =  array.filter(this.getUnique);
-        const uniquesLength = this.getArrayElementsLength(array);
+        const uniquesLength = this.getArrayEqualElementsLength(array);
 
         const unpaireds: number[] = [];
         uniques.forEach(unique => {
