@@ -1,10 +1,14 @@
+# Tests
+
+Hey Esparta! Here is my delivery. I did the to-do list, the logic array, and the logic distinct.
+
 # My Todo List
+
+The folder in this repo is: /my-todo-list
 
 Check the release accessing the link: XXX
 
 ## Overview
-
-Hey Esparta!
 
 This to-do list app was built to be simple, stylish, and user-friendly.
 
@@ -77,3 +81,31 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ### Need something else?
 
 If you have questions or suggestions please let me know.
+
+# Logic Test
+
+The folder in this repo is: /logic
+
+## Running
+
+### `npm run build-run`
+
+## Array
+
+We need to return the unique (non-repeating) values in an array.
+
+Let's think about this example: const array = [1, 2, 2, 2];
+
+The solution is to isolate the array's unique values into a variable. In the example, the only values are 1 and 2.
+
+Then we need to know what is the each unique value's length. In the example, 1 is length 1 and 2 is length 3.
+
+Then comes the catch: the description of the exercise asks for the return of an integer. But if all values are duplicated, the return is null. What if there is over one single value? The return must contain all these values in an array. In other words, we have three types of return: null, number and array.
+
+So we save all these values in an array and return them according to the "gotcha" above. In the example, the function's return is 1.
+
+That's it!
+
+## Distinct
+
+
