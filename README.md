@@ -96,7 +96,7 @@ We need to return the unique (non-repeating) values in an array.
 
 Let's think about this example: const array = [1, 2, 2, 2];
 
-The solution is to isolate the array's unique values into a variable. In the example, the only values are 1 and 2.
+The solution starts isolating the array's unique values into a variable. In the example, the only values are 1 and 2.
 
 Then we need to know what is the each unique value's length. In the example, 1 is length 1 and 2 is length 3.
 
