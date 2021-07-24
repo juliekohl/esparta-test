@@ -1,8 +1,20 @@
 class DistinctSolution {
+    /**
+     * Get all unique values
+     * @param value 
+     * @param index 
+     * @param self 
+     * @returns boolean
+     */
     private getUnique(value, index, self): boolean {
         return self.indexOf(value) === index;
     }
 
+    /**
+     * The solution
+     * @param array 
+     * @returns number
+     */
     public solution(array: number[]): number {
         const uniques =  array.filter(this.getUnique);
         return uniques.length;

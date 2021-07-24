@@ -1,6 +1,7 @@
 class ArraySolution {
     /**
      * Get all unique values
+     * 
      * @param value 
      * @param index 
      * @param self 
@@ -12,8 +13,9 @@ class ArraySolution {
 
     /**
      * Get length of same elements in an array
+     * 
      * @param array
-     * @returns 
+     * @returns object
      */
     private getArrayEqualElementsLength(array: number[]): {} {
         const counts = {};
@@ -25,8 +27,9 @@ class ArraySolution {
 
     /**
      * The solution
+     * 
      * @param array 
-     * @returns 
+     * @returns null | number | number[]
      */
     public solution(array: number[]): null | number | number[] {
         const uniques =  array.filter(this.getUnique);

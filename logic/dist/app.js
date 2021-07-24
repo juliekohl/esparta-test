@@ -1,19 +1,36 @@
 var ArraySolution = /** @class */ (function () {
     function ArraySolution() {
     }
+    /**
+     * Get all unique values
+     * @param value
+     * @param index
+     * @param self
+     * @returns boolean
+     */
     ArraySolution.prototype.getUnique = function (value, index, self) {
         return self.indexOf(value) === index;
     };
-    ArraySolution.prototype.getArrayElementsLength = function (array) {
+    /**
+     * Get length of same elements in an array
+     * @param array
+     * @returns
+     */
+    ArraySolution.prototype.getArrayEqualElementsLength = function (array) {
         var counts = {};
         array.forEach(function (x) {
             counts[x] = (counts[x] || 0) + 1;
         });
         return counts;
     };
+    /**
+     * The solution
+     * @param array
+     * @returns
+     */
     ArraySolution.prototype.solution = function (array) {
         var uniques = array.filter(this.getUnique);
-        var uniquesLength = this.getArrayElementsLength(array);
+        var uniquesLength = this.getArrayEqualElementsLength(array);
         var unpaireds = [];
         uniques.forEach(function (unique) {
             if (uniquesLength[unique] === 1)
