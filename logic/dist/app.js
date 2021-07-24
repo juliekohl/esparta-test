@@ -38,3 +38,31 @@ arrayExample = [9, 3, 9, 3, 9, 7, 9, 12];
 console.log("[" + arrayExample + "]", arraySolution.solution(arrayExample)); // [7, 12]
 arrayExample = [9, 3, 9, 3, 9, 7, 9, 7];
 console.log("[" + arrayExample + "]", arraySolution.solution(arrayExample)); // null
+var DistinctSolution = /** @class */ (function () {
+    function DistinctSolution() {
+    }
+    DistinctSolution.prototype.getUnique = function (value, index, self) {
+        return self.indexOf(value) === index;
+    };
+    DistinctSolution.prototype.solution = function (array) {
+        var uniques = array.filter(this.getUnique);
+        return uniques.length;
+    };
+    return DistinctSolution;
+}());
+console.log('\n', 'Challenge: distinct', '\n');
+var distinctSolution = new DistinctSolution();
+var distinctExample = [2, 1, 1, 2, 3, 1];
+console.log("[" + distinctExample + "]", distinctSolution.solution(distinctExample)); // 3
+distinctExample = [1, 1, 2, 2];
+console.log("[" + distinctExample + "]", distinctSolution.solution(distinctExample)); // 2
+distinctExample = [1, 1, 2, 2, 3, 3, 4, 4];
+console.log("[" + distinctExample + "]", distinctSolution.solution(distinctExample)); // 4
+distinctExample = [1, 1, 2, 2, 3, 3, 4, 4, -1000000];
+console.log("[" + distinctExample + "]", distinctSolution.solution(distinctExample)); // 5
+distinctExample = [1, 1, 2, 2, 3, 3, 4, 4, -1000000, -1000000];
+console.log("[" + distinctExample + "]", distinctSolution.solution(distinctExample)); // 5
+distinctExample = [1, 1, 2, 2, 3, 3, 4, 4, -1000000, -1000000, 1000000];
+console.log("[" + distinctExample + "]", distinctSolution.solution(distinctExample)); // 6
+distinctExample = [1, 1, 2, 2, 3, 3, 4, 4, -1000000, -1000000, 1000000, 1000000];
+console.log("[" + distinctExample + "]", distinctSolution.solution(distinctExample)); // 6
