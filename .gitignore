@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/logic/node_modules
+/my-todo-list/node_modules
 /.pnp
 .pnp.js
 

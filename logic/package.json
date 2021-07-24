@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "node_modules/.bin/tsc",
+    "run": "node ./dist/app.js",
+    "build-run": "node_modules/.bin/tsc; node ./dist/app.js"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
+}
