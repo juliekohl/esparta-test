@@ -6,7 +6,7 @@ Hey Esparta! Here is my delivery. I did the to-do list, the logic array, and the
 
 The folder in this repo is: /my-todo-list
 
-Check the release accessing the link: XXX
+Check the release accessing the link: https://esparta-test.vercel.app/
 
 ### Overview
 
